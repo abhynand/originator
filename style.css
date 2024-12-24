@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(images/lap1.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5vw;
+    background-color: rgb(78, 78, 78);
+}
+
+.logo h1 {
+    color: #ffd61f;
+    padding-left: 2vw;
+    font-size: 30px;
+}
+
+.nav-link {
+    display: flex;
+    padding-right: 80px;
+    gap: 1rem;
+}
+
+.nav-link a {
+    text-decoration: none;
+    color: aliceblue;
+    padding: 0 2vw;
+    font-size: 19px;
+}
+
+/*--------Main Heading--------*/
+
+.mainheading {
+    text-align: center;
+    width: 100%;
+    margin-top: 15vw;
+}
+
+.mainheading .h1 {
+    color: aliceblue;
+    font-weight: 800;
+    font-size: 3vw;
+}
+
+.mainheading .h2 {
+    color: aliceblue;
+    font-weight: 1000;
+    font-size: 5vw;
+    margin-top: 4px;
+    margin-bottom: 20px;
+}
+
+.mainheading button {
+    background-color: #ffd61f;
+    padding: 10px 30px;
+    color: black;
+    font-size: 18px;
+    border-radius: 10px;
+    border: 1px solid white;
+}
+
+/*---------Main Content-----------*/
+
+.container {
+    margin: 0;
+    padding: 0;
+}
+
+.service-heading {
+    text-align: center;
+    width: 100%;
+    margin-top: 120px;
+}
+
+.service-heading h1 {
+    font-size: 60px;
+    font-weight: 900;
+}
+
+.service-offers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px 0 100px;
+    padding: 5px 20px;
+    text-align: center;
+}
+
+.service-offers div {
+    flex: 1 1 calc(33.33% - 2rem);
+    padding: 40px;
+    text-align: center;
+}
+
+.service-offers img {
+    width: 90px;
+    height: 90px;
+}
+
+/*---------Portfolio---------*/
+
+.p {
+    background-color: beige;
+    padding: 16px;
+}
+
+.portfolio {
+    margin-top: 10px;
+    padding-top: 80px;
+    text-align: center;
+    margin-bottom: 10vh;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 30px;
+    padding: 0 20px;
+}
+
+.item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/*--------Team Members--------*/
+
+.team-members {
+    text-align: center;
+    margin: 100px 0 80px;
+}
+
+.members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.members img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/*--------Footer--------*/
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(243, 243, 243);
+}
+
+/*--------Responsive Design--------*/
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-link {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .mainheading .h1,
+    .mainheading .h2 {
+        font-size: 2rem;
+    }
+
+    .mainheading button {
+        font-size: 1rem;
+    }
+
+    .service-offers div {
+        flex: 1 1 calc(50% - 1rem);
+    }
+
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 4fr));
+    }
+
+    .members img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1{
+        font-size: .6rem;
+    }
+    .logo h1 {
+        font-size: 1rem;
+    }
+
+    .nav-link a {
+        font-size: 0.9rem;
+    }
+
+    .mainheading .h1,
+    .mainheading .h2 {
+        font-size: 1.2rem;
+    }
+
+    .service-offers div {
+        flex: 1 1 100%;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+
+    .members {
+        flex-direction: column;
+    }
+}
